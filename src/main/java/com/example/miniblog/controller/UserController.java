@@ -23,10 +23,10 @@ public class UserController {
     }
 
     // {} URL 경로 변수
-    @GetMapping("/{userName}")
+    @GetMapping("/{username}")
     // @PathVariable URL에서 {} 변수 값을 가져와 매개 변수에 바인딩
-    public ResponseEntity<User> getUser(@PathVariable String userName) {
-        return userService.findByUserName(userName)
+    public ResponseEntity<User> getUser(@PathVariable String username) {
+        return userService.findByUsername(username)
                 // 사용자가 존재하면 HTTP 200 응답과 함께 해당 사용자를 반환
                 .map(ResponseEntity::ok)
                 // 사용자가 존재하지 않으면 404 응답 반환

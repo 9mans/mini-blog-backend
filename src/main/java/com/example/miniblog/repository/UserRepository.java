@@ -9,5 +9,5 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     // 조회 결과가 빈값일 때 안전한 처리를 위해 optional 사용 쿼리메서드를 이용하여 조회
-    Optional<User> findByUserName(String username);
+    Optional<User> findByUsername(String username);
 }
